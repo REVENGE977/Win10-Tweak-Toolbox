@@ -365,6 +365,7 @@ if(YesNo -text "Do you want to download classic shell (requires chocolatey) ? [Y
     choco install classic-shell
 }
 
+
 Write-Output ""
 Write-Output "############ Windows Tweak Toolbox ############"
 Write-Output "- Please restart your machine to apply the changes !"
