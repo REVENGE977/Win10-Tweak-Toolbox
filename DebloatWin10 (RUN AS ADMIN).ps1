@@ -341,8 +341,6 @@ if(YesNo -text "Do you want to disable Windows Security ? [Y/N]") {
 	}
 	Set-ItemProperty -Path "HKLM:\SOFTWARE\Policies\Microsoft\MRT" -Name "DontOfferThroughWUAU" -Type DWord -Value 1
 	
-    Set-Content config WinDefend start= disabled
-    Set-Content stop WinDefend
     Set-MpPreference -DisableRealtimeMonitoring $true
 
     Write-Output "[ INFO ] Disabled Windows Defender"
