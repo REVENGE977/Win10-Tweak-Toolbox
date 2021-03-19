@@ -362,7 +362,7 @@ if(YesNo -text "Do you want to download reduce disk ? [Y/N]") {
 
 # Downloading classic shell
 if(YesNo -text "Do you want to download classic shell (requires chocolatey) ? [Y/N]") {
-    choco install classic-shell
+    choco install classic-shell -y
 }
 
 
