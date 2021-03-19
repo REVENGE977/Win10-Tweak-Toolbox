@@ -139,7 +139,7 @@ if(YesNo -text "Do you want to remove bloatware ? [Y/N]") {
 
 # disabling background apps
 if(YesNo -text "Do you want to disable background apps ? [Y/N]") {
-	Get-ChildItem -Path "HKCU:\Software\Microsoft\Windows\CurrentVersion\BackgroundAccessApplications" -Exclude "Microsoft.Windows.Cortana*" | ForEach {
+	Get-ChildItem -Path "HKCU:\Software\Microsoft\Windows\CurrentVersion\BackgroundAccessApplications" -Exclude "Microsoft.Windows.Cortana*" | ForEach-Object {
 		Set-ItemProperty -Path $_.PsPath -Name "Disabled" -Type DWord -Value 1
 		Set-ItemProperty -Path $_.PsPath -Name "DisabledByUser" -Type DWord -Value 1
 	}
@@ -161,7 +161,7 @@ if(YesNo -text "Do you want to disable windows search indexer (this will make wi
 
 # Installing Chocolatey package manager
 if(YesNo -text "Do you want to install Chocolatey ? [Y/N]") {
-    Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
+    Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; Invoke-Expression ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
     $chocolateyinstall = $true
     Write-Output "[ INFO ] Chocolatey installed"
 }
@@ -341,8 +341,8 @@ if(YesNo -text "Do you want to disable Windows Security ? [Y/N]") {
 	}
 	Set-ItemProperty -Path "HKLM:\SOFTWARE\Policies\Microsoft\MRT" -Name "DontOfferThroughWUAU" -Type DWord -Value 1
 	
-    sc config WinDefend start= disabled
-    sc stop WinDefend
+    Set-Content config WinDefend start= disabled
+    Set-Content stop WinDefend
     Set-MpPreference -DisableRealtimeMonitoring $true
 
     Write-Output "[ INFO ] Disabled Windows Defender"
