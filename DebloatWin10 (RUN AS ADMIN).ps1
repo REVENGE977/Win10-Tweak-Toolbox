@@ -17,6 +17,8 @@ Function YesNo($text) {
     } until ($response -eq 'n')
 }
 
+$chocolateyinstall = $false
+
 # use at your own risk prompt
 if(!(YesNo -text "Do you agree to use this toolbox at your own risk ? [Y/N]")) {
     exit
@@ -154,12 +156,14 @@ if(YesNo -text "Do you want to disable windows search indexer (this will make wi
 	Set-ItemProperty -Path "HKLM:\SOFTWARE\Policies\Microsoft\Windows\Windows Search" -Name "DisableWebSearch" -Type DWord -Value 1
 	Stop-Service "WSearch" -WarningAction SilentlyContinue
 	Set-Service "WSearch" -StartupType Disabled
-    Write-Output "[ INFO ] Disabled windows search indexer !"
+    Write-Output "[ INFO ] Disabled windows search indexer"
 }
 
 # Installing Chocolatey package manager
 if(YesNo -text "Do you want to install Chocolatey ? [Y/N]") {
     Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
+    $chocolateyinstall = $true
+    Write-Output "[ INFO ] Chocolatey installed"
 }
 
 # Using O&O Shutup
@@ -361,8 +365,10 @@ if(YesNo -text "Do you want to download reduce disk ? [Y/N]") {
 }
 
 # Downloading classic shell
-if(YesNo -text "Do you want to download classic shell (requires chocolatey) ? [Y/N]") {
-    choco install classic-shell -y
+if($chocolateyinstall) {
+    if(YesNo -text "Do you want to download classic shell (requires chocolatey) ? [Y/N]") {
+        choco install classic-shell -y
+    }
 }
 
 
