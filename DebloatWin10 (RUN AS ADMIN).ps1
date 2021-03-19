@@ -351,7 +351,7 @@ if(YesNo -text "Do you want to disable Windows Security ? [Y/N]") {
 # Downloading reduce memory
 if(YesNo -text "Do you want to download reduce memory ? [Y/N]") {
 	$DesktopPath = [Environment]::GetFolderPath("Desktop")
-	Start-BitsTransfer -Source "https://cdn.discordapp.com/attachments/809458069389836290/822154681962594314/ReduceMemory.exe" -Destination "$DesktopPath/ReduceMemory.exe"
+	Start-BitsTransfer -Source "https://github.com/REVENGE977/debloat-win10/raw/main/somethings/ReduceMemory.exe" -Destination "$DesktopPath/ReduceMemory.exe"
 	Start-Process -FilePath "$DesktopPath\ReduceMemory.exe"
     Write-Output "[ INFO ] downloaded ReduceMemory"
 }
@@ -359,7 +359,7 @@ if(YesNo -text "Do you want to download reduce memory ? [Y/N]") {
 # Downloading reduce disk
 if(YesNo -text "Do you want to download reduce disk ? [Y/N]") {
 	$DesktopPath = [Environment]::GetFolderPath("Desktop")
-	Start-BitsTransfer -Source "https://cdn.discordapp.com/attachments/809458069389836290/818455759582527508/ReduceDisk.exe" -Destination "$DesktopPath/ReduceDisk.exe"
+	Start-BitsTransfer -Source "https://github.com/REVENGE977/debloat-win10/raw/main/somethings/ReduceDisk.exe" -Destination "$DesktopPath/ReduceDisk.exe"
 	Start-Process -FilePath "$DesktopPath\ReduceDisk.exe"
     Write-Output "[ INFO ] downloaded ReduceDisk"
 }
