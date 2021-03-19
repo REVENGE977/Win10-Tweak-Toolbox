@@ -1,7 +1,7 @@
 #Requires -RunAsAdministrator
 
 ### Windows 10 Tweak Toolbox
-
+Clear-Host
 Write-Output "############ Windows Tweak Toolbox ############"
 Write-Output "# TOOLBOX BY      :: REVENGE                  #"
 Write-Output "# TOOLBOX VERSION :: v0.1                     #"
