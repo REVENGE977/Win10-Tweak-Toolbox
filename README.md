@@ -15,7 +15,7 @@ iex ((New-Object System.Net.WebClient).DownloadString('https://git.io/Jm6Z4'))
 <img src="https://upload.wikimedia.org/wikipedia/commons/b/b0/Chocolatey_icon.png" width="95" align="right"/>
 
 ### What is Chocolatey ?
-[Chocolatey](https://chocolatey.org/) is a package manager for windows, which means you can install a program by using commands instead if setups 
+[Chocolatey](https://chocolatey.org/) is a package manager for windows, which means it will give you the ability to download & install a program by using commands instead if setups 
 
 <br/>
 <img src="https://l.top4top.io/p_1905hnmof1.png" width="95" align="right"/>
