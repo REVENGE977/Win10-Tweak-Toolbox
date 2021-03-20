@@ -172,7 +172,7 @@ if(YesNo -text "Do you want to download & run O&O Shutup ? [Y/N]") {
 	Start-BitsTransfer -Source "https://raw.githubusercontent.com/REVENGE977/Win10-Tweak-Toolbox/main/ooshutup10.cfg" -Destination ooshutup10.cfg
 	Start-BitsTransfer -Source "https://dl5.oo-software.com/files/ooshutup10/OOSU10.exe" -Destination OOSU10.exe
 	Start-Sleep -s 2
-	./OOSU10 ooshutup10.cfg /quiet
+	./OOSU10.exe ooshutup10.cfg /quiet
 	
 	Start-Sleep -s 5
     Remove-Item '.\OOSU10'
