@@ -175,7 +175,7 @@ if(YesNo -text "Do you want to download & run O&O Shutup ? [Y/N]") {
 	./OOSU10.exe ooshutup10.cfg /quiet
 	
 	Start-Sleep -s 5
-    Remove-Item '.\OOSU10'
+    Remove-Item '.\OOSU10.exe'
     Remove-Item '.\ooshutup10.cfg'	
 
     Write-Output "[ INFO ] Used O&O Shutup"
