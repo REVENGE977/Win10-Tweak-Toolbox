@@ -169,7 +169,7 @@ if(YesNo -text "Do you want to install Chocolatey ? [Y/N]") {
 # Using O&O Shutup
 if(YesNo -text "Do you want to download & run O&O Shutup ? [Y/N]") {
     Import-Module BitsTransfer		
-	Start-BitsTransfer -Source "https://pastebin.com/raw/CWhzpKaC" -Destination ooshutup10.cfg
+	Start-BitsTransfer -Source "https://raw.githubusercontent.com/REVENGE977/Win10-Tweak-Toolbox/main/ooshutup10.cfg" -Destination ooshutup10.cfg
 	Start-BitsTransfer -Source "https://dl5.oo-software.com/files/ooshutup10/OOSU10.exe" -Destination OOSU10.exe
 	Start-Sleep -s 2
 	./OOSU10 ooshutup10.cfg /quiet
