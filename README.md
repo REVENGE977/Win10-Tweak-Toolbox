@@ -1,5 +1,28 @@
-# debloat-win10
-a simple debloat windows 10 script
+# Windows 10 Tweak Toolbox
+
+
+this script will give you the ability to tweak windows to your needs,
+it won't do anything on its own it will ask you before doing almost everything.
+
+<br/>
+
+**You will be able to:**
+- disable windows updates
+- disable windows defender
+- [debloat windows](https://github.com/REVENGE977/debloat-win10/blob/de897a3ef04b723dd1cb2c0dd8f1e1775a08615d/DebloatWin10%20(RUN%20AS%20ADMIN).ps1#L50)
+- disable background apps
+- disable windows search indexer
+- download [Chocolatey](https://github.com/REVENGE977/debloat-win10#what-is-chocolatey-)
+- run [O&O Shutup10](https://www.oo-software.com/en/shutup10) 
+- disable telemetry
+- disable location tracking
+- disable scheduled tasks
+- disable Cortana
+- disable action center
+- enable Visualfx
+- uninstall OneDrive
+- download [ReduceMemory & ReduceDisk](https://github.com/REVENGE977/debloat-win10#what-is-reducememory--reducedisk-)
+- download [Classic Shell](https://github.com/REVENGE977/debloat-win10#what-is-classic-shell-)
 
 ### How to run ?
 press `windows + r`
