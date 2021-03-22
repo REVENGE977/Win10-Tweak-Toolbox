@@ -28,7 +28,7 @@ it won't do anything on its own it will ask you before doing almost everything.
 press `windows + r`
 and type `powershell`
 and press `ctrl + shift + enter`
-**If UAC prompt comes up, press yes**
+**If UAC prompt comes up, click yes**
 
 and paste this command:
 ```powershell
