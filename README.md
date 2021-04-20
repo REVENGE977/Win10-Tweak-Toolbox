@@ -46,7 +46,7 @@ iex ((New-Object System.Net.WebClient).DownloadString('https://git.io/JmyLZ'))
 
 ### What is Classic Shell ?
 [Classic Shell](http://www.classicshell.net/) is a software manages your start menu, for example you can get windows 7 start menu and you can change the start icon too, pretty useful for slow pc's.
-**chocolatey is required to installing this app**
+**chocolatey is required to install this app**
 
 <br/>
 
